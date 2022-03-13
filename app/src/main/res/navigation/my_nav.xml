@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeScreen"
+    >
+
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.example.sysc_4907.homeScreen"
+        android:label="Home Screen"
+        tools:layout="@layout/home_screen">
+
+        <action
+            android:id="@+id/action_homeScreen_to_biometricVerification"
+            app:destination="@+id/biometricVerification"/>
+        <action
+            android:id="@+id/action_homeScreen_to_registerScreen"
+            app:destination="@+id/registerScreen"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/signInScreen"
+        android:name="com.example.sysc_4907.signInScreen"
+        android:label="Sign In Screen"
+        tools:layout="@layout/sign_in_screen">
+
+        <action
+            android:id="@+id/action_signInScreen_to_homeScreen"
+            app:destination="@+id/homeScreen"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerScreen"
+        android:name="com.example.sysc_4907.registerScreen"
+        android:label="Register Screen"
+        tools:layout="@layout/register_screen">
+
+        <action
+            android:id="@+id/action_registerScreen_to_homeScreen"
+            app:destination="@+id/homeScreen"/>
+        <action
+            android:id="@+id/action_registerScreen_to_faceScanScreen"
+            app:destination="@+id/faceScanScreen"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/faceScanScreen"
+        android:name="com.example.sysc_4907.faceScanScreen"
+        android:label="Face Scan Screen"
+        tools:layout="@layout/face_scan_screen">
+
+        <action
+            android:id="@+id/action_faceScanScreen_to_homeScreen"
+            app:destination="@+id/homeScreen"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/biometricVerification"
+        android:name="com.example.sysc_4907.biometricVerification"
+        android:label="Biometric Verification Screen"
+        tools:layout="@layout/biometric_verification">
+
+        <action
+            android:id="@+id/action_biometricVerification_to_signInScreen"
+            app:destination="@+id/signInScreen"/>
+        <action
+            android:id="@+id/action_biometricVerification_to_homeScreen"
+            app:destination="@+id/homeScreen"/>
+    </fragment>
+
+</navigation>
+
+
