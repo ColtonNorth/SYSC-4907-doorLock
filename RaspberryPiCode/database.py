@@ -155,14 +155,14 @@ if __name__ == '__main__':
 	    elif(lockDoor == 1):
 		 GPIO.output(RELAY,GPIO.LOW)
 		 lockDoor = 0
-        sleep(3)
-        sign_in(3)
-        cursor.execute('SELECT * FROM emails');
-        print('Sending Emails to customers...')
-        for row in cursor:
-            #print(row['email']);
-            server.sendmail("SYSC4907.75@gmail.com", row['email'],"The door has been unlocked.")
-            print('Emails sent')
+            sleep(3)
+            sign_in(3)
+            cursor.execute('SELECT * FROM emails');
+            print('Sending Emails to customers...')
+            for row in cursor:
+                #print(row['email']);
+                server.sendmail("SYSC4907.75@gmail.com", row['email'],"The door has been unlocked.")
+                print('Emails sent')
 
 
         if count == 1:
