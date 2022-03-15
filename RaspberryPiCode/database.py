@@ -151,10 +151,10 @@ if __name__ == '__main__':
             print('Door unlocked')
 	    if(lockDoor == 0):
 	    	GPIO.output(RELAY,GPIO.HIGH)
-		    lockDoor = 1
+		lockDoor = 1
 	    elif(lockDoor == 1):
-		    GPIO.output(RELAY,GPIO.LOW)
-		    lockDoor = 0
+		 GPIO.output(RELAY,GPIO.LOW)
+		 lockDoor = 0
         sleep(3)
         sign_in(3)
         cursor.execute('SELECT * FROM emails');
