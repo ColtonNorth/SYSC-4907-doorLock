@@ -7,7 +7,6 @@ import json
 import time
 from time import sleep
 import sqlite3
-import smtplib
 
 def get_new_username():
     URL = 'https://api.thingspeak.com/channels/1677753/fields/1.json?api_key=7JB5J9EMWYKXSLRC&results1'
