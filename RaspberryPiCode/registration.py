@@ -34,8 +34,8 @@ def get_new_username():
 
     temp = []
     for x in get_data['feeds']:
-        print(x['field1'])
-        temp.append(x['field1'])
+        print(x['field2'])
+        temp.append(x['field2'])
     return temp[0]
 
 if __name__ == '__main__':
